@@ -1,7 +1,25 @@
 # X32Client
 A wrapper around the OSC protocol used to interact with the Behringer X32 family of digital mixers.
 
-Usage:
+My goal is to abstract the osc messages and udp networking away, allowing development to be focus on features of the mixer.
+
+For details about the Behringer OSC protocal, check out: 
+http://behringerwiki.music-group.com/index.php?title=OSC_Remote_Protocol
+
+## Supported Features
+Currently only supports the "configuration" and "gate" commands listed in 
+http://behringerwiki.music-group.com/index.php?title=Channel_(/ch)_data
+
+Note: Testing has been pretty light. There are a couple fields that don't seem to be returning appropriate values.
+
+## Next Steps
+My first focus is to complete all /ch related commands including properties for: compressor, insert settings, EQ, mix, DCA and Mute groups
+
+Also looking to update how various settings are defined. For example Gate Thresholds are represented as a value from 0.0 to 1.0 in relation to the dial range. I would like to represent this in the appropriate decible range ie. -80dB to 0db (unity). Please leave some comments if you think that would be worthwhile.
+
+One day I may work on an asynchronous version but currently I'm more focused on making the library intuitive to use by all developers.
+
+## Usage
 
 ```cs
 
