@@ -6,6 +6,8 @@ My goal is to abstract the osc messages and udp networking away, allowing develo
 For details about the Behringer OSC protocal, check out: 
 http://behringerwiki.music-group.com/index.php?title=OSC_Remote_Protocol
 
+Special thanks to https://github.com/ValdemarOrn/SharpOSC as I cannibalized his OSC classes!
+
 ## Supported Features
 Currently only supports the "configuration" and "gate" commands listed in 
 http://behringerwiki.music-group.com/index.php?title=Channel_(/ch)_data
