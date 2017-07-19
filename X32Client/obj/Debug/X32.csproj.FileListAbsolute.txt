@@ -1,0 +1,6 @@
+K:\Development\X32Client\X32Client\obj\Debug\X32.csprojResolveAssemblyReference.cache
+K:\Development\X32Client\X32Client\obj\Debug\X32Client.exe
+K:\Development\X32Client\X32Client\obj\Debug\X32Client.pdb
+K:\Development\X32Client\X32Client\bin\Debug\X32Client.exe.config
+K:\Development\X32Client\X32Client\bin\Debug\X32Client.exe
+K:\Development\X32Client\X32Client\bin\Debug\X32Client.pdb
