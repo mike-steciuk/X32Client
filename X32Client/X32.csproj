@@ -7,7 +7,7 @@
     <ProjectGuid>{FFEFD8ED-862B-4F9E-8F5C-95465E7A2DC0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>X32Client</RootNamespace>
+    <RootNamespace>X32</RootNamespace>
     <AssemblyName>X32Client</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -55,6 +55,21 @@
     <Compile Include="Osc\Utils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="X32\Channel\Channel.cs" />
+    <Compile Include="X32\Channel\Compressor.cs" />
+    <Compile Include="X32\Channel\Delay.cs" />
+    <Compile Include="X32\Channel\Gate.cs" />
+    <Compile Include="X32\Channel\Preamp.cs" />
+    <Compile Include="X32\Enums\EnumExtensions.cs" />
+    <Compile Include="X32\Enums\X32Color.cs" />
+    <Compile Include="X32\Enums\X32CompressorDetectionType.cs" />
+    <Compile Include="X32\Enums\X32CompressorEnvelopeType.cs" />
+    <Compile Include="X32\Enums\X32CompressorMode.cs" />
+    <Compile Include="X32\Enums\X32CompressorRatio.cs" />
+    <Compile Include="X32\Enums\X32FilterType.cs" />
+    <Compile Include="X32\Enums\X32GateMode.cs" />
+    <Compile Include="X32\Enums\X32Position.cs" />
+    <Compile Include="X32\Enums\X32Source.cs" />
     <Compile Include="X32\X32Client.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using X32.OSC;
+using X32.Enums;
 
 namespace X32
 {
@@ -11,7 +12,8 @@ namespace X32
     {
         static void Main(string[] args)
         {
-            var x32Client = new X32Client("192.168.0.109");
+            var x32Client = new X32Client("192.168.0.104");
+
             x32Client.ReceiveTimeout = 100;
             //x32Client.ReceiveTimeout = 1;
 
@@ -23,11 +25,13 @@ namespace X32
                 Console.WriteLine($"{i}: - {chan.Name} | {chan.Color.GetName()} | {chan.Source.GetName()} | {chan.Delay.On} | {chan.Delay.Time.ToString()}");
             }
 
-            //var chan1 = x32Client.GetChannel(1);
-            //chan1.Name = "Hello";
-            //chan1.Color = X32Color.InvertedRed;
-            //chan1.Icon = 3;
-            //chan1.Source = X32Source.In02;
+            var chan1 = x32Client.GetChannel(1);
+            chan1.Name = "Hello";
+            chan1.Color = X32Color.InvertedRed;
+            chan1.Icon = 3;
+            chan1.Source = X32Source.In02;
+
+            chan1.Compressor.On = true;
 
             Console.WriteLine("Press Any Key");
             Console.ReadKey();
@@ -38,7 +42,7 @@ namespace X32
         {
             var channel = client.GetChannel(1);
             var gate = channel.Gate;
-            Console.WriteLine($"{gate.On} | {gate.GateMode.GetName()} |  {gate.Threshold} |  {gate.Range} |  {gate.Attack} |  {gate.Hold} |  {gate.Release} |  {gate.KeySource.GetName()} |  {gate.FilterOn} |  {gate.FilterType.GetName()} |  {gate.FilterFreq}");
+            Console.WriteLine($"{gate.On} | {gate.Mode.GetName()} |  {gate.Threshold} |  {gate.Range} |  {gate.Attack} |  {gate.Hold} |  {gate.Release} |  {gate.KeySource.GetName()} |  {gate.FilterOn} |  {gate.FilterType.GetName()} |  {gate.FilterFreq}");
         }
         static void PrintOsc(OscMessage message)
         {
